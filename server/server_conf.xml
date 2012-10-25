@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acs_server>    
+        <acs_ip>192.168.1.66</acs_ip>
+        <acs_port>51000</acs_port>
+        <acs_functions>
+            <name>GetRPCMethods</name>            
+            <name>InformResponse</name>
+            <name>EmptyResponse</name>
+        </acs_functions>    
+</acs_server>
+
+<!-- 
+
+    This is the configuration file for the acs server please read the 
+    instructions before you proceed to any action.
+
+    [1] To add a function in the server just use the template:
+    
+        <name>function_name</name>
+
+        and replace the "function_name" with one of the following names
+
+        GetParameterNames
+        GetParameterValues
+        GetParameterAttributes
+        SetParameterValues
+        SetParameterAttributes
+        AddObject
+        DeleteObject
+        Download
+        ScheduleInform
+        Reboot
+        FactoryReset
+        GetRPCMethods
+        InformResponse
+
+        don't use quotas.
+        
+    [2] To set or get specifiec parametes with the Set* and Get* you have
+        
+        to edit the xml files which are located in the xml_templates folder.
+        
+    [3] Always include the informResponce function, this function is 
+    
+        necessary in order to open a session with the cpe. InformResponse is
+        
+        not a tr-069 function.
+        
+    [4] The order in which the methods are reported is significant exept from
+    
+        the InformResponse method. Methods declared first will be proceded 
+        
+        first.
+
+--> 
