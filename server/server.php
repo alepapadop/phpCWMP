@@ -31,6 +31,8 @@
             $this->acs_port=$acs_parameters['acs_port'];            
             $this->acs_functions=$acs_parameters['acs_functions'];
             $this->acs_functions_init=$acs_parameters['acs_functions'];
+            
+            $this->mlog('Server start on socket '.$this->acs_ip.':'.$this->acs_port);
                       
         }
         
@@ -45,21 +47,24 @@
             if(($socket = socket_create(AF_INET,SOCK_STREAM,0))===false )
             {
                 $this->mlog ('Could not create socket');
-                die('End of script\n');
+                $this->mlog ('End of script');
+                die();
             }                    
 
             # Bind to socket
             if(socket_bind($socket,$this->acs_ip,$this->acs_port)===false)
             {
                 $this->mlog ('Could not bind to socket');
-                die('End of script\n');
+                $this->mlog ('End of script');
+                die();
             }
 
             # Start listening
             if(socket_listen($socket)===false)
             {
                 $this->mlog ('Could not set up socket listener');
-                die('End of script\n');
+                $this->mlog ('End of script');
+                die();
             }
                                     
             return $socket;
@@ -70,6 +75,8 @@
         {
             $peer_ip=null;
             $peer_port=null;            
+            
+            $this->mlog('Waiting for connections ...');
             
             socket_set_block($master_socket);
             
@@ -99,16 +106,21 @@
             $session_established=false;
             $temp=null;
             $this->acs_functions=$this->acs_functions_init;
+            $counter=0;
             
+            # Set 5 sec timeout to client socket           
             socket_set_option($client,SOL_SOCKET, SO_RCVTIMEO, array("sec"=>5, "usec"=>0));
             
             # Set up a blocking call to socket_select(), waits for a change in socket stastus
             socket_select($this->client,$write = NULL, $except = NULL, $tv_sec= NULL);                        
-                                    
+            
+            #reading loop for a specific session
             do{                                
-                                                
+                
+                #reading data from the client
                 $input = socket_read($client,2048);                             
                 
+                #error output
                 if($input===false)
                     $this->mlog('Read error '.socket_strerror(socket_last_error())).chr(10);                                
                 
@@ -124,28 +136,30 @@
                     
                     unset($data);
                     
-                    unset($this->client);
+                    unset($this->client);                                        
                     
-                    $flag= false;                               
+                    $flag= false;
+                    
+                    $this->mlog('Client ip: '.$this->peer_ip.' disconnected');
 
                 }
                 
-                #data from the socket
+                #if there are any data from the socket
                 if($input)
                 {   
                     $data.=$input;
-                    
-                    
-                    if($session_established==true)
-                    {                                                
-                        
-                        $this->server_session($client);
-                                                                        
-                    }
-                    
+                                                            
                     $temp.=$input;
                     
-                    #this means the modem has sent me the complete response
+                    #if a session has been estrablished this part of code is executed.
+                    if($session_established==true)
+                    {
+                        $counter++;
+                        $this->server_session($client,$counter);
+                    }
+
+                    #this means the modem has sent the complete response after the request from the acs.
+                    #The acs send an emptyResponse message in order to start a session with the cpe.
                     if(stripos($temp,'</soapenv:Envelope>')!==false && $session_established===false)
                     {   
                         
@@ -163,48 +177,68 @@
                                
         }
         
-        function server_session($client)
+        private function server_session($client,& $counter)
         {            
-            foreach($this->acs_functions as $key=>$function)
-            {
-                switch ($function):
-                    case 'GetRPCMethods':                        
-                        $this->mlog('Calling getRPCMethods Function');
-                        $this->server_session_getRPCMethods($client);
-                        unset($this->acs_functions[$key]);
+            
+            $function=$this->acs_functions[0];
+            
+            switch ($function):
+                case 'GetRPCMethods':                    
+                    switch ($counter):
+                        case 1:
+                            $this->mlog('Calling getRPCMethods Function');
+                            $this->server_session_getRPCMethods($client);
+                            break;
+                        case 2:
+                            unset($this->acs_functions[0]);
+                            $counter=0;
                         break;
-                    case 'Reboot':
-                        $this->mlog('Calling Reboot Function');
-                        $this->server_session_reboot($client);
-                        
-                        $this->mlog('Calling EmptyReposnse Function');
-                        $this->server_session_emptyResponse($client);
-                        
-                        $this->mlog('Calling socket_close() Function');
-                        socket_close($client);
-                        
-                        unset($this->acs_functions[$key]);
-                        break;
-                    case 'SetParameterValues':
-                        $this->mlog('Calling SetParameters Function');
-                        $this->server_session_setParameter($client);                        
-                        
-                        $this->mlog('Calling EmptyReposnse Function');
-                        $this->server_session_emptyResponse($client);
-                        
-                        $this->mlog('Calling socket_close() Function');
-                        socket_close($client);
-                        
-                        unset($this->acs_functions[$key]);
-                        break;
-                endswitch;
-                
-                break;
-            }
+                    endswitch;
+                    
+                    break;
+                    
+                case 'Reboot':
+                    switch ($counter):
+                        case 1:                    
+                            $this->mlog('Calling Reboot Function');
+                            $this->server_session_reboot($client);
+                            break;
+                        case 2:
+                            $this->mlog('Calling EmptyReposnse Function');
+                            $this->server_session_emptyResponse($client);
+                            break;
+                        case 3:
+                            $this->mlog('Calling socket_close() Function');
+                            socket_close($client);
+                            unset($this->acs_functions[0]);
+                            $counter=0;
+                            break;
+                    endswitch;
+                            
+                    break;
+                case 'SetParameterValues':
+                    switch ($counter):
+                        case 1:
+                            $this->mlog('Calling SetParameters Function');
+                            $this->server_session_setParameter($client);
+                            break;
+                        case 2:
+                            $this->mlog('Calling EmptyReposnse Function');
+                            $this->server_session_emptyResponse($client);
+                            break;
+                        case 3:
+                            $this->mlog('Calling socket_close() Function');
+                            socket_close($client);
+                            unset($this->acs_functions[0]);
+                            $counter=0;
+                            break;
+                    endswitch;
+                    
+                    break;
+            endswitch;
             
         }
-        
-        
+                   
         private function server_session_informResponse($client)
         {                        
             

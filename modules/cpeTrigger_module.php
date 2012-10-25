@@ -1,7 +1,17 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
+    class cpeTrigger{
+        
+        private  $cpe_ip;
+        private  $cpe_port;
+        private  $cpe_user;
+        private  $cpe_pass;
+        private  $cpe_auth;
+        
+        
+        
+        
+    }
+
 ?>
