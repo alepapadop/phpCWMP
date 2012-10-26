@@ -137,10 +137,10 @@
                 # The socket has timed out and the connection is closed
                 if($input==null)
                 {
+                                                                                
+//                    print_r($data);
                     
-                    $datastring=$this->server_http_dechunk($data);
-                    
-                    print_r($data);
+                    $this->server_http_extract_parts($data);
                     
                     socket_close($client);
                     
@@ -152,11 +152,7 @@
                     
                     $flag= false;
                     
-                    $this->mlog('Client ip: '.$this->peer_ip.' disconnected');
-                    
-                    
-                    
-                    print_r($datastring);
+                    $this->mlog('Client ip: '.$this->peer_ip.' disconnected');                                                            
 
                 }
                 
@@ -321,10 +317,23 @@
             sleep(1);
         }
         
+        private function server_http_extract_parts($data)
+        {
+            $data_array=$this->server_http_dechunk($data);
+            
+            $soap_header_array=$this->server_http_soap_header($data_array);
+            
+            print_r($soap_header_array);
+        }
+                        
+        
+        
+        
         # Function for removing chunk data size information
         private function server_http_dechunk($data)
         {
             $data_array = explode("\r\n", $data);
+            
             
             foreach($data_array as $line_num=>$line_string)
             {
@@ -334,16 +343,72 @@
                 # A line with a hex number number has been found
                 if($r)
                     unset($data_array[$line_num]);
-                    
+                                                    
             }
             
             return $data_array;
             
-        }
+        }               
         
-        private function server_http_separate_header_soap($data)
+        private function server_http_soap_header($data_array)
         {
+            $soap_start_flag=false;
+            $soap_end_flag=false;
+            $header_start_flag=false;
+            $header_end_flag=false;
+            $soap_array=array();
+            $header_array=array();
+            $counter=0;                        
             
+            foreach($data_array as $line_num=>$line_string)
+            {
+                
+                if(stripos(trim($line_string),'<soapenv:Envelope')!==false && $soap_start_flag===false)
+                {                 
+                    $soap_start_flag=true;
+                    $soap_end_flag=false;
+                }
+                
+                if($soap_start_flag==true && $soap_end_flag==false)
+                {                    
+                    $soap_array[$counter].=$line_string.chr(10);
+                    unset($data_array[$line_num]);
+                }                
+                
+                if(stripos(trim($line_string), '</soapenv:Envelope>')!==false && $soap_end_flag===false)
+                {                   
+                    $soap_end_flag=true;
+                    $soap_start_flag=false;
+                    $counter++;
+                }
+                
+            }
+            
+            $counter=0;
+            
+            foreach($data_array as $line_num=>$line_string)
+            {
+                if(stripos(trim($line_string),'POST')!==false && $header_start_flag===false)
+                {                 
+                    $header_start_flag=true;
+                    $header_end_flag=false;
+                }
+                
+                if($header_start_flag==true && $header_end_flag==false)
+                {                    
+                    $header_array[$counter].=$line_string.chr(10);
+                    unset($data_array[$line_num]);
+                } 
+                
+                if(trim($line_string)=='' && $header_end_flag===false)
+                {                   
+                    $header_end_flag=true;
+                    $header_start_flag=false;
+                    $counter++;
+                }
+            }
+                                    
+            return array('soap_array'=>$soap_array,'header_array'=>$header_array);
         }
         
         private function is_hex($hex) 
