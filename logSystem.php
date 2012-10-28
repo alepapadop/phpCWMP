@@ -14,14 +14,15 @@
                 $this->log_location ();
                 
             $fh=fopen($this->log_file_path, 'a+');
-            $fh=  fwrite($fh, $msg);
+            $fh=  fwrite($fh, $msg.chr(10));
             fclose($fh);
                 
         }
         
         public function log_location(){
             
-            $default_path=dirname($__FILE__);
+            $filename=__FILE__;
+            $default_path=dirname($filename);
             $this->log_file_path=$default_path.'/log';
             
         }

@@ -51,7 +51,7 @@
         {
             $xml_array=array();
             
-            $xml_array=$this->server_conf_parse_xml();                        
+            $xml_array=$this->server_conf_parse_xml();
             
             foreach($xml_array['acs_functions'] as $functions)
             {                

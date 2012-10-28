@@ -1,7 +1,12 @@
 <?php
     
+    $filename=__FILE__;
+    $current_directory=dirname($filename);
+    $root_directory=  dirname($current_directory);
+
     require_once '../logSystem.php';
     require_once 'server_conf.php';
+    require_once $root_directory.'/xml_parser/xml_parser.php';
      # php socket server
     error_reporting(E_ERROR);
     
@@ -102,18 +107,25 @@
             # Adding master_socket and the client into array to pass them to secket_select
             $this->client[0]=$client;
             $this->client[1]=$master_socket;
+            
             # Tracks if reading loop is over
             $flag=true;
+            
             # Stores the whole data received from th cpe
             $data=null;
+            
             # Tracks if a socket_close is called
             $connection_state=true;
+            
             # Tracks is a session is established
             $session_established=false;
+            
             # Tracks the response from the cpe per read loop
             $temp=null;
+            
             # Makes a copy of the acs_functios in order to use them for a new connection
             $this->acs_functions=$this->acs_functions_init;
+            
             # Counts the commands that are called per session in order to call them one 
             # by one. So each command will need a readind loop to be executed.
             $counter=0;
@@ -140,7 +152,7 @@
                                                                                 
 //                    print_r($data);
                     
-                    $this->server_http_extract_parts($data);
+                    $this->server_http_extract_parts($data);                                        
                     
                     socket_close($client);
                     
@@ -323,7 +335,15 @@
             
             $soap_header_array=$this->server_http_soap_header($data_array);
             
-            print_r($soap_header_array);
+//            print_r($soap_header_array);
+            
+            $xml_parser=new xml_parser($this->acs_functions_init,$soap_header_array['soap_array']);
+            
+            
+            
+
+            
+//            $this->server_data_parser_xml_parser($soap_header_array['soap_array'], $soap_header_array['header_array']);
         }
                         
         

@@ -1,0 +1,583 @@
+[2012-10-28 16:26:47] Waiting for connections ...
+[2012-10-28 16:26:49] Client 192.168.1.254 connected
+[2012-10-28 16:26:53] Calling EmptyReposnse Function
+[2012-10-28 16:26:54] Calling getRPCMethods Function
+[2012-10-28 16:26:55] Parsing getRPCMEthod soap response
+[2012-10-28 16:40:42] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:40:42] Waiting for connections ...
+[2012-10-28 16:40:43] Client 192.168.1.254 connected
+[2012-10-28 16:40:47] Calling EmptyReposnse Function
+[2012-10-28 16:40:48] Calling getRPCMethods Function
+[2012-10-28 16:40:49] Parsing getRPCMEthod soap response
+[2012-10-28 16:41:19] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:41:19] Could not bind to socket
+[2012-10-28 16:41:19] End of script
+[2012-10-28 16:41:30] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:41:30] Could not bind to socket
+[2012-10-28 16:41:30] End of script
+[2012-10-28 16:41:31] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:41:31] Could not bind to socket
+[2012-10-28 16:41:31] End of script
+[2012-10-28 16:41:43] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:41:43] Could not bind to socket
+[2012-10-28 16:41:43] End of script
+[2012-10-28 16:41:44] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:41:44] Could not bind to socket
+[2012-10-28 16:41:44] End of script
+[2012-10-28 16:41:56] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:41:56] Waiting for connections ...
+[2012-10-28 16:42:00] Client 192.168.1.254 connected
+[2012-10-28 16:42:03] Calling EmptyReposnse Function
+[2012-10-28 16:42:04] Calling getRPCMethods Function
+[2012-10-28 16:42:05] Parsing getRPCMEthod soap response
+[2012-10-28 16:47:21] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:47:21] Waiting for connections ...
+[2012-10-28 16:47:23] Client 192.168.1.254 connected
+[2012-10-28 16:47:27] Calling EmptyReposnse Function
+[2012-10-28 16:47:28] Calling getRPCMethods Function
+[2012-10-28 16:47:29] Parsing getRPCMEthod soap response
+[2012-10-28 16:47:29] Parsing inform soap response
+[2012-10-28 16:47:29] Client ip: 192.168.1.254 disconnected
+[2012-10-28 16:47:30] Waiting for connections ...
+[2012-10-28 16:50:59] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:50:59] Waiting for connections ...
+[2012-10-28 16:51:02] Client 192.168.1.254 connected
+[2012-10-28 16:51:06] Calling EmptyReposnse Function
+[2012-10-28 16:51:07] Calling getRPCMethods Function
+[2012-10-28 16:51:08] Parsing getRPCMEthod soap response
+[2012-10-28 16:51:08] Parsing inform soap response
+[2012-10-28 16:51:08] Client ip: 192.168.1.254 disconnected
+[2012-10-28 16:51:09] Waiting for connections ...
+[2012-10-28 16:54:03] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:54:03] Waiting for connections ...
+[2012-10-28 16:54:06] Client 192.168.1.254 connected
+[2012-10-28 16:54:09] Calling EmptyReposnse Function
+[2012-10-28 16:54:10] Calling getRPCMethods Function
+[2012-10-28 16:54:11] Parsing getRPCMEthod soap response
+[2012-10-28 16:54:11] Parsing inform soap response
+[2012-10-28 16:54:11] Client ip: 192.168.1.254 disconnected
+[2012-10-28 16:54:12] Waiting for connections ...
+[2012-10-28 16:54:54] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:54:54] Could not bind to socket
+[2012-10-28 16:54:54] End of script
+[2012-10-28 16:58:25] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:58:25] Waiting for connections ...
+[2012-10-28 16:58:28] Client 192.168.1.254 connected
+[2012-10-28 16:58:31] Calling EmptyReposnse Function
+[2012-10-28 16:58:32] Calling getRPCMethods Function
+[2012-10-28 16:58:33] Parsing getRPCMEthod soap response
+[2012-10-28 16:58:33] Parsing inform soap response
+[2012-10-28 16:58:33] Client ip: 192.168.1.254 disconnected
+[2012-10-28 16:58:34] Waiting for connections ...
+[2012-10-28 16:58:55] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:58:55] Could not bind to socket
+[2012-10-28 16:58:55] End of script
+[2012-10-28 16:59:54] Server start on socket 192.168.1.66:51000
+[2012-10-28 16:59:54] Waiting for connections ...
+[2012-10-28 16:59:56] Client 192.168.1.254 connected
+[2012-10-28 16:59:59] Calling EmptyReposnse Function
+[2012-10-28 17:00:00] Calling getRPCMethods Function
+[2012-10-28 17:00:01] Parsing getRPCMEthod soap response
+[2012-10-28 17:00:01] Parsing inform soap response
+[2012-10-28 17:00:01] Client ip: 192.168.1.254 disconnected
+[2012-10-28 17:00:02] Waiting for connections ...
+[2012-10-28 17:00:41] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:00:41] Could not bind to socket
+[2012-10-28 17:00:41] End of script
+[2012-10-28 17:00:55] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:00:55] Could not bind to socket
+[2012-10-28 17:00:55] End of script
+[2012-10-28 17:01:18] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:01:18] Waiting for connections ...
+[2012-10-28 17:01:21] Client 192.168.1.254 connected
+[2012-10-28 17:01:24] Calling EmptyReposnse Function
+[2012-10-28 17:01:25] Calling getRPCMethods Function
+[2012-10-28 17:01:26] Parsing getRPCMEthod soap response
+[2012-10-28 17:01:26] Parsing inform soap response
+[2012-10-28 17:01:26] Client ip: 192.168.1.254 disconnected
+[2012-10-28 17:01:27] Waiting for connections ...
+[2012-10-28 17:07:55] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:07:55] Waiting for connections ...
+[2012-10-28 17:07:56] Client 192.168.1.254 connected
+[2012-10-28 17:08:00] Calling EmptyReposnse Function
+[2012-10-28 17:08:01] Calling getRPCMethods Function
+[2012-10-28 17:08:02] Parsing getRPCMEthod soap response
+[2012-10-28 17:08:02] Parsing inform soap response
+[2012-10-28 17:08:02] Client ip: 192.168.1.254 disconnected
+[2012-10-28 17:08:03] Waiting for connections ...
+[2012-10-28 17:09:23] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:09:23] Waiting for connections ...
+[2012-10-28 17:09:26] Client 192.168.1.254 connected
+[2012-10-28 17:09:29] Calling EmptyReposnse Function
+[2012-10-28 17:09:30] Calling getRPCMethods Function
+[2012-10-28 17:09:31] Parsing getRPCMEthod soap response
+[2012-10-28 17:16:29] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:16:29] Waiting for connections ...
+[2012-10-28 17:16:31] Client 192.168.1.254 connected
+[2012-10-28 17:16:35] Calling EmptyReposnse Function
+[2012-10-28 17:16:36] Calling getRPCMethods Function
+[2012-10-28 17:16:37] Parsing getRPCMEthod soap response
+[2012-10-28 17:17:37] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:17:37] Waiting for connections ...
+[2012-10-28 17:17:39] Client 192.168.1.254 connected
+[2012-10-28 17:17:43] Calling EmptyReposnse Function
+[2012-10-28 17:17:44] Calling getRPCMethods Function
+[2012-10-28 17:17:45] Parsing getRPCMEthod soap response
+[2012-10-28 17:18:43] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:18:43] Waiting for connections ...
+[2012-10-28 17:18:45] Client 192.168.1.254 connected
+[2012-10-28 17:18:49] Calling EmptyReposnse Function
+[2012-10-28 17:18:50] Calling getRPCMethods Function
+[2012-10-28 17:18:51] Parsing getRPCMEthod soap response
+[2012-10-28 17:19:33] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:19:33] Could not bind to socket
+[2012-10-28 17:19:33] End of script
+[2012-10-28 17:20:40] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:20:40] Waiting for connections ...
+[2012-10-28 17:20:42] Client 192.168.1.254 connected
+[2012-10-28 17:20:46] Calling EmptyReposnse Function
+[2012-10-28 17:20:47] Calling getRPCMethods Function
+[2012-10-28 17:20:48] Parsing getRPCMEthod soap response
+[2012-10-28 17:21:20] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:21:20] Could not bind to socket
+[2012-10-28 17:21:20] End of script
+[2012-10-28 17:25:15] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:25:15] Waiting for connections ...
+[2012-10-28 17:25:18] Client 192.168.1.254 connected
+[2012-10-28 17:25:22] Calling EmptyReposnse Function
+[2012-10-28 17:25:23] Calling getRPCMethods Function
+[2012-10-28 17:25:24] Parsing getRPCMEthod soap response
+[2012-10-28 17:35:35] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:35:35] Waiting for connections ...
+[2012-10-28 17:35:38] Client 192.168.1.254 connected
+[2012-10-28 17:35:42] Calling EmptyReposnse Function
+[2012-10-28 17:35:43] Calling getRPCMethods Function
+[2012-10-28 17:35:44] Parsing getRPCMEthod soap response
+[2012-10-28 17:36:01] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:36:01] Could not bind to socket
+[2012-10-28 17:36:01] End of script
+[2012-10-28 17:37:22] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:37:22] Waiting for connections ...
+[2012-10-28 17:37:24] Client 192.168.1.254 connected
+[2012-10-28 17:37:28] Calling EmptyReposnse Function
+[2012-10-28 17:37:29] Calling getRPCMethods Function
+[2012-10-28 17:37:30] Parsing inform soap response
+[2012-10-28 17:37:30] Client ip: 192.168.1.254 disconnected
+[2012-10-28 17:37:31] Waiting for connections ...
+[2012-10-28 17:41:01] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:41:01] Waiting for connections ...
+[2012-10-28 17:41:04] Client 192.168.1.254 connected
+[2012-10-28 17:41:07] Calling EmptyReposnse Function
+[2012-10-28 17:41:08] Calling getRPCMethods Function
+[2012-10-28 17:41:09] Parsing inform soap response
+[2012-10-28 17:41:09] Client ip: 192.168.1.254 disconnected
+[2012-10-28 17:41:10] Waiting for connections ...
+[2012-10-28 17:42:07] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:42:07] Could not bind to socket
+[2012-10-28 17:42:07] End of script
+[2012-10-28 17:42:08] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:42:08] Could not bind to socket
+[2012-10-28 17:42:08] End of script
+[2012-10-28 17:42:09] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:42:09] Could not bind to socket
+[2012-10-28 17:42:09] End of script
+[2012-10-28 17:42:09] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:42:09] Could not bind to socket
+[2012-10-28 17:42:09] End of script
+[2012-10-28 17:42:10] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:42:10] Could not bind to socket
+[2012-10-28 17:42:10] End of script
+[2012-10-28 17:42:22] Server start on socket 192.168.1.66:51000
+[2012-10-28 17:42:22] Waiting for connections ...
+[2012-10-28 17:42:25] Client 192.168.1.254 connected
+[2012-10-28 17:42:29] Calling EmptyReposnse Function
+[2012-10-28 17:42:30] Calling getRPCMethods Function
+[2012-10-28 17:42:31] Parsing getRPCMEthod soap response
+[2012-10-28 18:01:47] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:01:47] Waiting for connections ...
+[2012-10-28 18:01:49] Client 192.168.1.254 connected
+[2012-10-28 18:01:53] Calling EmptyReposnse Function
+[2012-10-28 18:01:54] Calling getRPCMethods Function
+[2012-10-28 18:01:55] Parsing getRPCMEthod soap response
+[2012-10-28 18:04:53] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:04:53] Waiting for connections ...
+[2012-10-28 18:04:55] Client 192.168.1.254 connected
+[2012-10-28 18:04:59] Calling EmptyReposnse Function
+[2012-10-28 18:05:00] Calling getRPCMethods Function
+[2012-10-28 18:05:01] Parsing getRPCMEthod soap response
+[2012-10-28 18:06:12] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:06:12] Waiting for connections ...
+[2012-10-28 18:06:14] Client 192.168.1.254 connected
+[2012-10-28 18:06:18] Calling EmptyReposnse Function
+[2012-10-28 18:06:19] Calling getRPCMethods Function
+[2012-10-28 18:06:20] Parsing inform soap response
+[2012-10-28 18:07:01] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:07:01] Could not bind to socket
+[2012-10-28 18:07:01] End of script
+[2012-10-28 18:07:23] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:07:23] Waiting for connections ...
+[2012-10-28 18:07:26] Client 192.168.1.254 connected
+[2012-10-28 18:07:29] Calling EmptyReposnse Function
+[2012-10-28 18:07:30] Calling getRPCMethods Function
+[2012-10-28 18:07:31] Parsing inform soap response
+[2012-10-28 18:08:27] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:08:27] Could not bind to socket
+[2012-10-28 18:08:27] End of script
+[2012-10-28 18:09:59] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:09:59] Waiting for connections ...
+[2012-10-28 18:10:01] Client 192.168.1.254 connected
+[2012-10-28 18:10:05] Calling EmptyReposnse Function
+[2012-10-28 18:10:06] Calling getRPCMethods Function
+[2012-10-28 18:10:07] Parsing inform soap response
+[2012-10-28 18:11:02] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:11:02] Could not bind to socket
+[2012-10-28 18:11:02] End of script
+[2012-10-28 18:11:53] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:11:53] Waiting for connections ...
+[2012-10-28 18:11:55] Client 192.168.1.254 connected
+[2012-10-28 18:11:59] Calling EmptyReposnse Function
+[2012-10-28 18:12:00] Calling getRPCMethods Function
+[2012-10-28 18:12:01] Parsing inform soap response
+[2012-10-28 18:13:05] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:13:05] Waiting for connections ...
+[2012-10-28 18:13:07] Client 192.168.1.254 connected
+[2012-10-28 18:13:10] Calling EmptyReposnse Function
+[2012-10-28 18:13:11] Calling getRPCMethods Function
+[2012-10-28 18:13:12] Parsing inform soap response
+[2012-10-28 18:24:45] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:24:45] Waiting for connections ...
+[2012-10-28 18:24:47] Client 192.168.1.254 connected
+[2012-10-28 18:24:50] Calling EmptyReposnse Function
+[2012-10-28 18:24:51] Calling getRPCMethods Function
+[2012-10-28 18:24:52] Parsing inform soap response
+[2012-10-28 18:25:43] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:25:43] Could not bind to socket
+[2012-10-28 18:25:43] End of script
+[2012-10-28 18:27:23] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:27:23] Waiting for connections ...
+[2012-10-28 18:27:25] Client 192.168.1.254 connected
+[2012-10-28 18:27:29] Calling EmptyReposnse Function
+[2012-10-28 18:27:30] Calling getRPCMethods Function
+[2012-10-28 18:27:31] Parsing inform soap response
+[2012-10-28 18:28:05] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:28:05] Could not bind to socket
+[2012-10-28 18:28:05] End of script
+[2012-10-28 18:28:23] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:28:23] Could not bind to socket
+[2012-10-28 18:28:23] End of script
+[2012-10-28 18:28:24] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:28:24] Could not bind to socket
+[2012-10-28 18:28:24] End of script
+[2012-10-28 18:28:25] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:28:25] Could not bind to socket
+[2012-10-28 18:28:25] End of script
+[2012-10-28 18:28:26] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:28:26] Waiting for connections ...
+[2012-10-28 18:28:29] Client 192.168.1.254 connected
+[2012-10-28 18:28:33] Calling EmptyReposnse Function
+[2012-10-28 18:28:34] Calling getRPCMethods Function
+[2012-10-28 18:28:35] Parsing inform soap response
+[2012-10-28 18:28:35] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:28:35] Could not bind to socket
+[2012-10-28 18:28:35] End of script
+[2012-10-28 18:29:54] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:29:54] Waiting for connections ...
+[2012-10-28 18:29:56] Client 192.168.1.254 connected
+[2012-10-28 18:30:00] Calling EmptyReposnse Function
+[2012-10-28 18:30:01] Calling getRPCMethods Function
+[2012-10-28 18:30:02] Parsing inform soap response
+[2012-10-28 18:30:02] Could not create xml obj
+[2012-10-28 18:36:12] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:36:12] Waiting for connections ...
+[2012-10-28 18:36:15] Client 192.168.1.254 connected
+[2012-10-28 18:36:19] Calling EmptyReposnse Function
+[2012-10-28 18:36:20] Calling getRPCMethods Function
+[2012-10-28 18:36:21] Parsing inform soap response
+[2012-10-28 18:36:21] Could not create xml obj
+[2012-10-28 18:40:11] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:40:11] Waiting for connections ...
+[2012-10-28 18:40:14] Client 192.168.1.254 connected
+[2012-10-28 18:40:17] Calling EmptyReposnse Function
+[2012-10-28 18:40:18] Calling getRPCMethods Function
+[2012-10-28 18:40:19] Parsing inform soap response
+[2012-10-28 18:40:19] Could not create xml obj
+[2012-10-28 18:41:16] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:41:16] Waiting for connections ...
+[2012-10-28 18:41:19] Client 192.168.1.254 connected
+[2012-10-28 18:41:22] Calling EmptyReposnse Function
+[2012-10-28 18:41:23] Calling getRPCMethods Function
+[2012-10-28 18:41:24] Parsing inform soap response
+[2012-10-28 18:41:24] Could not create xml obj
+[2012-10-28 18:42:22] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:42:22] Waiting for connections ...
+[2012-10-28 18:42:24] Client 192.168.1.254 connected
+[2012-10-28 18:42:27] Calling EmptyReposnse Function
+[2012-10-28 18:42:28] Calling getRPCMethods Function
+[2012-10-28 18:42:29] Parsing inform soap response
+[2012-10-28 18:42:29] Could not create xml obj
+[2012-10-28 18:44:36] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:44:36] Waiting for connections ...
+[2012-10-28 18:44:38] Client 192.168.1.254 connected
+[2012-10-28 18:44:42] Calling EmptyReposnse Function
+[2012-10-28 18:44:43] Calling getRPCMethods Function
+[2012-10-28 18:44:44] Parsing inform soap response
+[2012-10-28 18:44:44] Could not create xml obj
+[2012-10-28 18:46:23] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:46:23] Waiting for connections ...
+[2012-10-28 18:46:25] Client 192.168.1.254 connected
+[2012-10-28 18:46:28] Calling EmptyReposnse Function
+[2012-10-28 18:46:29] Calling getRPCMethods Function
+[2012-10-28 18:46:30] Parsing inform soap response
+[2012-10-28 18:46:30] Could not create xml obj
+[2012-10-28 18:50:05] Server start on socket 192.168.1.66:51000
+[2012-10-28 18:50:05] Waiting for connections ...
+[2012-10-28 18:50:07] Client 192.168.1.254 connected
+[2012-10-28 18:50:11] Calling EmptyReposnse Function
+[2012-10-28 18:50:12] Calling getRPCMethods Function
+[2012-10-28 18:50:13] Parsing inform soap response
+[2012-10-28 18:50:13] Could not create xml obj
+[2012-10-28 19:15:40] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:15:40] Waiting for connections ...
+[2012-10-28 19:15:43] Client 192.168.1.254 connected
+[2012-10-28 19:15:47] Calling EmptyReposnse Function
+[2012-10-28 19:15:48] Calling getRPCMethods Function
+[2012-10-28 19:15:49] Parsing inform soap response
+[2012-10-28 19:15:49] Could not create xml obj
+[2012-10-28 19:16:52] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:16:52] Waiting for connections ...
+[2012-10-28 19:16:55] Client 192.168.1.254 connected
+[2012-10-28 19:16:58] Calling EmptyReposnse Function
+[2012-10-28 19:16:59] Calling getRPCMethods Function
+[2012-10-28 19:17:00] Parsing inform soap response
+[2012-10-28 19:17:30] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:30] Could not bind to socket
+[2012-10-28 19:17:30] End of script
+[2012-10-28 19:17:45] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:45] Could not bind to socket
+[2012-10-28 19:17:45] End of script
+[2012-10-28 19:17:46] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:46] Could not bind to socket
+[2012-10-28 19:17:46] End of script
+[2012-10-28 19:17:46] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:46] Could not bind to socket
+[2012-10-28 19:17:46] End of script
+[2012-10-28 19:17:47] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:47] Could not bind to socket
+[2012-10-28 19:17:47] End of script
+[2012-10-28 19:17:47] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:47] Could not bind to socket
+[2012-10-28 19:17:47] End of script
+[2012-10-28 19:17:48] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:48] Could not bind to socket
+[2012-10-28 19:17:48] End of script
+[2012-10-28 19:17:48] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:17:48] Could not bind to socket
+[2012-10-28 19:17:48] End of script
+[2012-10-28 19:19:54] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:19:54] Waiting for connections ...
+[2012-10-28 19:19:56] Client 192.168.1.254 connected
+[2012-10-28 19:19:59] Calling EmptyReposnse Function
+[2012-10-28 19:20:00] Calling getRPCMethods Function
+[2012-10-28 19:20:01] Parsing inform soap response
+[2012-10-28 19:20:01] Could not create xml obj
+[2012-10-28 19:22:01] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:22:01] Waiting for connections ...
+[2012-10-28 19:22:04] Client 192.168.1.254 connected
+[2012-10-28 19:22:07] Calling EmptyReposnse Function
+[2012-10-28 19:22:08] Calling getRPCMethods Function
+[2012-10-28 19:22:09] Parsing inform soap response
+[2012-10-28 19:24:04] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:24:04] Waiting for connections ...
+[2012-10-28 19:24:07] Client 192.168.1.254 connected
+[2012-10-28 19:24:10] Calling EmptyReposnse Function
+[2012-10-28 19:24:11] Calling getRPCMethods Function
+[2012-10-28 19:24:12] Parsing inform soap response
+[2012-10-28 19:25:36] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:25:36] Waiting for connections ...
+[2012-10-28 19:25:39] Client 192.168.1.254 connected
+[2012-10-28 19:25:42] Calling EmptyReposnse Function
+[2012-10-28 19:25:43] Calling getRPCMethods Function
+[2012-10-28 19:25:44] Parsing inform soap response
+[2012-10-28 19:26:49] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:26:49] Waiting for connections ...
+[2012-10-28 19:26:51] Client 192.168.1.254 connected
+[2012-10-28 19:26:55] Calling EmptyReposnse Function
+[2012-10-28 19:26:56] Calling getRPCMethods Function
+[2012-10-28 19:26:57] Parsing inform soap response
+[2012-10-28 19:27:46] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:27:46] Could not bind to socket
+[2012-10-28 19:27:46] End of script
+[2012-10-28 19:29:35] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:29:35] Waiting for connections ...
+[2012-10-28 19:29:44] Client 192.168.1.254 connected
+[2012-10-28 19:29:48] Calling EmptyReposnse Function
+[2012-10-28 19:29:49] Calling getRPCMethods Function
+[2012-10-28 19:29:50] Parsing inform soap response
+[2012-10-28 19:29:50] Could not create xml obj
+[2012-10-28 19:30:30] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:30:30] Could not bind to socket
+[2012-10-28 19:30:30] End of script
+[2012-10-28 19:31:02] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:31:02] Waiting for connections ...
+[2012-10-28 19:31:08] Client 192.168.1.254 connected
+[2012-10-28 19:31:11] Calling EmptyReposnse Function
+[2012-10-28 19:31:12] Calling getRPCMethods Function
+[2012-10-28 19:31:14] Parsing inform soap response
+[2012-10-28 19:31:14] Could not create xml obj
+[2012-10-28 19:41:26] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:41:26] Waiting for connections ...
+[2012-10-28 19:41:29] Client 192.168.1.254 connected
+[2012-10-28 19:41:32] Calling EmptyReposnse Function
+[2012-10-28 19:41:33] Calling getRPCMethods Function
+[2012-10-28 19:41:34] Parsing inform soap response
+[2012-10-28 19:41:34] Could not create xml obj
+[2012-10-28 19:41:55] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:41:55] Could not bind to socket
+[2012-10-28 19:41:55] End of script
+[2012-10-28 19:42:30] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:42:30] Waiting for connections ...
+[2012-10-28 19:42:32] Client 192.168.1.254 connected
+[2012-10-28 19:42:36] Calling EmptyReposnse Function
+[2012-10-28 19:42:37] Calling getRPCMethods Function
+[2012-10-28 19:42:38] Parsing inform soap response
+[2012-10-28 19:42:38] Could not create xml obj
+[2012-10-28 19:44:10] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:44:10] Waiting for connections ...
+[2012-10-28 19:44:14] Client 192.168.1.254 connected
+[2012-10-28 19:44:18] Calling EmptyReposnse Function
+[2012-10-28 19:44:19] Calling getRPCMethods Function
+[2012-10-28 19:44:20] Parsing inform soap response
+[2012-10-28 19:44:20] Could not create xml obj
+[2012-10-28 19:45:03] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:03] Could not bind to socket
+[2012-10-28 19:45:03] End of script
+[2012-10-28 19:45:10] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:10] Could not bind to socket
+[2012-10-28 19:45:10] End of script
+[2012-10-28 19:45:11] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:11] Could not bind to socket
+[2012-10-28 19:45:11] End of script
+[2012-10-28 19:45:12] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:12] Could not bind to socket
+[2012-10-28 19:45:12] End of script
+[2012-10-28 19:45:13] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:13] Could not bind to socket
+[2012-10-28 19:45:13] End of script
+[2012-10-28 19:45:13] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:13] Could not bind to socket
+[2012-10-28 19:45:13] End of script
+[2012-10-28 19:45:14] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:14] Could not bind to socket
+[2012-10-28 19:45:14] End of script
+[2012-10-28 19:45:15] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:15] Could not bind to socket
+[2012-10-28 19:45:15] End of script
+[2012-10-28 19:45:21] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:45:21] Waiting for connections ...
+[2012-10-28 19:45:24] Client 192.168.1.254 connected
+[2012-10-28 19:45:27] Calling EmptyReposnse Function
+[2012-10-28 19:45:28] Calling getRPCMethods Function
+[2012-10-28 19:45:29] Parsing inform soap response
+[2012-10-28 19:45:29] Could not create xml obj
+[2012-10-28 19:46:20] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:46:20] Could not bind to socket
+[2012-10-28 19:46:20] End of script
+[2012-10-28 19:46:37] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:46:37] Waiting for connections ...
+[2012-10-28 19:46:40] Client 192.168.1.254 connected
+[2012-10-28 19:46:43] Calling EmptyReposnse Function
+[2012-10-28 19:46:44] Calling getRPCMethods Function
+[2012-10-28 19:46:45] Parsing inform soap response
+[2012-10-28 19:49:28] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:49:28] Waiting for connections ...
+[2012-10-28 19:49:31] Client 192.168.1.254 connected
+[2012-10-28 19:49:35] Calling EmptyReposnse Function
+[2012-10-28 19:49:36] Calling getRPCMethods Function
+[2012-10-28 19:49:37] Parsing inform soap response
+[2012-10-28 19:59:47] Server start on socket 192.168.1.66:51000
+[2012-10-28 19:59:47] Waiting for connections ...
+[2012-10-28 19:59:50] Client 192.168.1.254 connected
+[2012-10-28 19:59:53] Calling EmptyReposnse Function
+[2012-10-28 19:59:54] Calling getRPCMethods Function
+[2012-10-28 19:59:55] Parsing inform soap response
+[2012-10-28 20:01:37] Server start on socket 192.168.1.66:51000
+[2012-10-28 20:01:37] Waiting for connections ...
+[2012-10-28 20:01:39] Client 192.168.1.254 connected
+[2012-10-28 20:01:43] Calling EmptyReposnse Function
+[2012-10-28 20:01:44] Calling getRPCMethods Function
+[2012-10-28 20:01:45] Parsing inform soap response
+[2012-10-28 20:05:05] Server start on socket 192.168.1.66:51000
+[2012-10-28 20:05:05] Waiting for connections ...
+[2012-10-28 20:05:07] Client 192.168.1.254 connected
+[2012-10-28 20:05:11] Calling EmptyReposnse Function
+[2012-10-28 20:05:12] Calling getRPCMethods Function
+[2012-10-28 20:05:13] Parsing inform soap response
+[2012-10-28 20:06:21] Server start on socket 192.168.1.66:51000
+[2012-10-28 20:06:21] Waiting for connections ...
+[2012-10-28 20:06:23] Client 192.168.1.254 connected
+[2012-10-28 20:06:27] Calling EmptyReposnse Function
+[2012-10-28 20:06:28] Calling getRPCMethods Function
+[2012-10-28 20:06:29] Parsing inform soap response
+[2012-10-28 20:12:31] Server start on socket 192.168.1.66:51000
+[2012-10-28 20:12:31] Waiting for connections ...
+[2012-10-28 20:12:33] Client 192.168.1.254 connected
+[2012-10-28 20:12:37] Calling EmptyReposnse Function
+[2012-10-28 20:12:38] Calling getRPCMethods Function
+[2012-10-28 20:12:39] Parsing inform soap response
+[2012-10-28 22:08:40] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:08:40] Waiting for connections ...
+[2012-10-28 22:08:43] Client 192.168.1.254 connected
+[2012-10-28 22:08:47] Calling EmptyReposnse Function
+[2012-10-28 22:08:48] Calling getRPCMethods Function
+[2012-10-28 22:08:49] Parsing inform soap response
+[2012-10-28 22:22:52] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:22:52] Waiting for connections ...
+[2012-10-28 22:22:55] Client 192.168.1.254 connected
+[2012-10-28 22:22:58] Calling EmptyReposnse Function
+[2012-10-28 22:22:59] Calling getRPCMethods Function
+[2012-10-28 22:23:00] Parsing inform soap response
+[2012-10-28 22:23:00] Could not create xml obj
+[2012-10-28 22:23:16] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:16] Could not bind to socket
+[2012-10-28 22:23:16] End of script
+[2012-10-28 22:23:37] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:37] Could not bind to socket
+[2012-10-28 22:23:37] End of script
+[2012-10-28 22:23:46] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:46] Could not bind to socket
+[2012-10-28 22:23:46] End of script
+[2012-10-28 22:23:47] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:47] Could not bind to socket
+[2012-10-28 22:23:47] End of script
+[2012-10-28 22:23:48] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:48] Could not bind to socket
+[2012-10-28 22:23:48] End of script
+[2012-10-28 22:23:49] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:49] Could not bind to socket
+[2012-10-28 22:23:49] End of script
+[2012-10-28 22:23:58] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:58] Could not bind to socket
+[2012-10-28 22:23:58] End of script
+[2012-10-28 22:23:59] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:23:59] Could not bind to socket
+[2012-10-28 22:23:59] End of script
+[2012-10-28 22:24:00] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:24:00] Could not bind to socket
+[2012-10-28 22:24:00] End of script
+[2012-10-28 22:24:00] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:24:00] Waiting for connections ...
+[2012-10-28 22:24:03] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:24:03] Waiting for connections ...
+[2012-10-28 22:24:05] Client 192.168.1.254 connected
+[2012-10-28 22:24:09] Calling EmptyReposnse Function
+[2012-10-28 22:24:10] Calling getRPCMethods Function
+[2012-10-28 22:24:11] Parsing inform soap response
+[2012-10-28 22:24:50] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:24:50] Could not bind to socket
+[2012-10-28 22:24:50] End of script
+[2012-10-28 22:25:17] Server start on socket 192.168.1.66:51000
+[2012-10-28 22:25:17] Waiting for connections ...
+[2012-10-28 22:25:19] Client 192.168.1.254 connected
+[2012-10-28 22:25:23] Calling EmptyReposnse Function
+[2012-10-28 22:25:24] Calling getRPCMethods Function
+[2012-10-28 22:25:25] Parsing inform soap response
