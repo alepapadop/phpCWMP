@@ -60,7 +60,7 @@
                 foreach($object as $eventStruct)
                 {
                     foreach($eventStruct as $key=>$value)
-                        $output.=$key.' : '.$value.chr(10);
+                        $output.='RPC function : '.$value.chr(10);
                 }
 
             }

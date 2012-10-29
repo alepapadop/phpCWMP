@@ -1,0 +1,15 @@
+Manufacturer : THOMSON
+OUI : 589835
+ProductClass : Thomson TG585 v8
+SerialNumber : CP1146SFKEM
+EventCode : 6 CONNECTION REQUEST
+CommandKey : 
+Time : 2000-01-05T20:39:48Z
+.ExternalIPAddress : 192.168.1.254
+InternetGatewayDevice.DeviceInfo.HardwareVersion : IANT-E
+InternetGatewayDevice.DeviceInfo.ProvisioningCode : AXManaged
+InternetGatewayDevice.DeviceInfo.SoftwareVersion : 8.2.7.8
+InternetGatewayDevice.DeviceInfo.SpecVersion : 1.1
+InternetGatewayDevice.DeviceSummary : InternetGatewayDevice:1.3[](Baseline:1, EthernetLAN:1, ADSLWAN:1, EthernetWAN:1, Bridging:1, Time:1, DeviceAssociation:1, WiFiLAN:1, QoS:1, IPPing:1)
+InternetGatewayDevice.ManagementServer.ConnectionRequestURL : http://192.168.1.254:51005/
+InternetGatewayDevice.ManagementServer.ParameterKey : 12345

@@ -22,17 +22,18 @@
             
             
             #get the id element
-            $id_object=$this->get_device_id($xml_handler);
+            $id_object=$this->get_device_id($xml_handler);            
             #parse the id element
-            $output.=$this->$this->parse_device_id($id_object);           
+            $output.=$this->parse_device_id($id_object);           
             #unset variable
             unset($id_object);
 
-
+            
+            
             #get the device elemet
             $event_object=$this->get_device_event($xml_handler);
             #parse the device element
-            $output.=$this->$this->parse_device_event($event_object);
+            $output.=$this->parse_device_event($event_object);
             #unset variable
             unset($event_object);
 
@@ -40,7 +41,7 @@
             #get the time element
             $time_object=$this->get_current_time($xml_handler);
             #parse the time element
-            $output.=$this->$this->parse_current_time($time_object);
+            $output.=$this->parse_current_time($time_object);
             #unset variable
             unset($time_object);
 
@@ -48,7 +49,7 @@
             #get the parameter list
             $parameter_object=$this->get_parameterList($xml_handler);
             #parse the parameter list element
-            $output.=$this->$this->parse_parameterList($parameter_object);
+            $output.=$this->parse_parameterList($parameter_object);
             #unset variable
             unset($parameter_object);                                              
             
@@ -61,27 +62,15 @@
 
         private function create_xml_handler($xmlStr){           
             
-            # create simpleXML object
-            
-            print_r($xmlStr);
-            
+            # create simpleXML object            
             $xml = simplexml_load_string($xmlStr);
             
             if($xml===false)
-                $this->mlog ('Could not create xml obj');
-            var_dump($xml);
-            
-            print_r($xml);  
-            
-            print_r(libxml_get_errors());
+                $this->mlog ('Could not create xml obj');                                                
             
             # get namespaces of the xml
             $xml->registerXPathNamespace('cwmp', 'urn:dslforum-org:cwmp-1-0');
             
-            $res = $xml->xpath('//cwmp:Inform/DeviceId');
-            
-            echo 'aaaaa';
-            print_r($res);
             
             #return xml object
             return $xml;
@@ -89,8 +78,8 @@
 
         private function get_device_id($xml){        
 
-            $res = $xml->xpath('//cwmp:Inform/DeviceId');
-
+            $res = $xml->xpath('//cwmp:Inform/DeviceId');                        
+            
             return $res;
 
         }

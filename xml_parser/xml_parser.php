@@ -37,7 +37,7 @@
                         $getRPCMethodsXMLObj=new xml_parser_inform_module();
                         $getRPCMethodsXMLObj->xml_parser($soap_array[$num]);
                         break;                    
-                    case 'GetRPCMethodsaaa':
+                    case 'GetRPCMethods':
                         foreach($soap_array as $key=>$soap)
                         {
                             if(stripos($soap,'<cwmp:GetRPCMethodsResponse>'))

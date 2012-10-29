@@ -581,3 +581,38 @@
 [2012-10-28 22:25:23] Calling EmptyReposnse Function
 [2012-10-28 22:25:24] Calling getRPCMethods Function
 [2012-10-28 22:25:25] Parsing inform soap response
+[2012-10-29 08:46:51] Server start on socket 192.168.1.66:51000
+[2012-10-29 08:46:51] Waiting for connections ...
+[2012-10-29 08:46:54] Client 192.168.1.254 connected
+[2012-10-29 08:46:58] Calling EmptyReposnse Function
+[2012-10-29 08:46:59] Calling getRPCMethods Function
+[2012-10-29 08:47:00] Parsing inform soap response
+[2012-10-29 08:48:05] Server start on socket 192.168.1.66:51000
+[2012-10-29 08:48:05] Waiting for connections ...
+[2012-10-29 08:48:07] Client 192.168.1.254 connected
+[2012-10-29 08:48:11] Calling EmptyReposnse Function
+[2012-10-29 08:48:12] Calling getRPCMethods Function
+[2012-10-29 08:48:13] Parsing inform soap response
+[2012-10-29 08:50:47] Server start on socket 192.168.1.66:51000
+[2012-10-29 08:50:47] Waiting for connections ...
+[2012-10-29 08:50:51] Client 192.168.1.254 connected
+[2012-10-29 08:50:55] Calling EmptyReposnse Function
+[2012-10-29 08:50:56] Calling getRPCMethods Function
+[2012-10-29 08:50:57] Parsing inform soap response
+[2012-10-29 08:55:58] Server start on socket 192.168.1.66:51000
+[2012-10-29 08:55:58] Waiting for connections ...
+[2012-10-29 08:56:01] Client 192.168.1.254 connected
+[2012-10-29 08:56:05] Calling EmptyReposnse Function
+[2012-10-29 08:56:06] Calling getRPCMethods Function
+[2012-10-29 08:56:07] Parsing inform soap response
+[2012-10-29 08:56:07] Client ip: 192.168.1.254 disconnected
+[2012-10-29 08:56:08] Waiting for connections ...
+[2012-10-29 09:11:42] Server start on socket 192.168.1.66:51000
+[2012-10-29 09:11:42] Waiting for connections ...
+[2012-10-29 09:11:45] Client 192.168.1.254 connected
+[2012-10-29 09:11:49] Calling EmptyReposnse Function
+[2012-10-29 09:11:50] Calling getRPCMethods Function
+[2012-10-29 09:11:51] Parsing getRPCMEthod soap response
+[2012-10-29 09:11:51] Parsing inform soap response
+[2012-10-29 09:11:51] Client ip: 192.168.1.254 disconnected
+[2012-10-29 09:11:52] Waiting for connections ...
