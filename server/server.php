@@ -14,6 +14,11 @@
         
         private $acs_ip;
         private $acs_port;
+        private $cpe_ip;
+        private $cpe_port;
+        private $cpe_auth;
+        private $cpe_user;
+        private $cpe_pass;
         private $peer_ip;
         private $peer_port;
         private $acs_functions;
@@ -33,7 +38,12 @@
             $acs_parameters=$server_conf_obj->server_conf_get_parameters();                        
             
             $this->acs_ip=$acs_parameters['acs_ip'];
-            $this->acs_port=$acs_parameters['acs_port'];            
+            $this->acs_port=$acs_parameters['acs_port'];
+            $this->cpe_ip=$acs_parameters['cpe_ip'];
+            $this->cpe_port=$acs_parameters['cpe_port'];
+            $this->cpe_auth=$acs_parameters['cpe_auth'];
+            $this->cpe_user=$acs_parameters['cpe_user'];
+            $this->cpe_pass=$acs_parameters['cpe_pass'];
             $this->acs_functions=$acs_parameters['acs_functions'];
             $this->acs_functions_init=$acs_parameters['acs_functions'];
             
@@ -83,8 +93,10 @@
             
             $this->mlog('Waiting for connections ...');
             
+            $this->server_trigger_cpe();
+                        
             socket_set_block($master_socket);
-            
+                                                
             if(($client= socket_accept($master_socket))===false)
             {
                 $this->mlog('socket_accept() failed: '.socket_strerror($client));
@@ -96,7 +108,7 @@
                 $this->peer_port=$peer_port;
                 
                 $this->mlog('Client '.$peer_ip.' connected');
-            }
+            }            
             
             return $client;
             
@@ -148,9 +160,7 @@
                 
                 # The socket has timed out and the connection is closed
                 if($input==null)
-                {
-                                                                                
-//                    print_r($data);
+                {                                                                                
                     
                     $this->server_http_extract_parts($data);                                        
                     
@@ -200,6 +210,67 @@
                 
             }while($flag==true);
                                
+        }
+        
+        private function server_send_cpe_credentials()
+        {
+            
+            $url='http://'.$this->cpe_ip.':'.$this->cpe_port;
+            $user=$this->cpe_user;
+            $pass=$this->cpe_pass;
+            $auth=$this->cpe_auth;
+            
+            
+            $headers = array(             
+                "Content-type: text/xml;charset=\"utf-8\"", 
+                "Accept: text/xml",
+
+            );
+
+            $curl_session=curl_init();
+            curl_setopt($curl_session, CURLOPT_URL,            $url );   
+            curl_setopt($curl_session, CURLOPT_CONNECTTIMEOUT, 1); 
+            curl_setopt($curl_session, CURLOPT_TIMEOUT,        1);
+            curl_setopt($curl_session, CURLOPT_RETURNTRANSFER, true );
+            curl_setopt($curl_session, CURLOPT_SSL_VERIFYPEER, false);  
+            curl_setopt($curl_session, CURLOPT_SSL_VERIFYHOST, false);                 
+            curl_setopt($curl_session, CURLOPT_HTTPHEADER    , $headers);
+            curl_setopt($curl_session, CURLINFO_HEADER_OUT   , true);
+            
+            if(strtolower($auth)=='digest')
+            {
+                curl_setopt($curl_session, CURLOPT_HTTPAUTH      , CURLAUTH_DIGEST);
+                curl_setopt($curl_session, CURLOPT_USERPWD,        $user . ":" . $pass);
+                $r = curl_exec($curl_session);
+            }
+            elseif(strtolower($auth)=='basic')
+            {
+                curl_setopt($curl_session, CURLOPT_HTTPAUTH      , CURLAUTH_BASIC);
+                curl_setopt($curl_session, CURLOPT_USERPWD,        $user . ":" . $pass);
+                $r = curl_exec($curl_session);
+            }
+
+            $r = curl_exec($curl_session);                        
+            
+            if($r===false)
+                $this->mlog ('CPE trigger failed');                        
+
+            curl_close($curl_session);
+                        
+        }
+        
+        private function server_trigger_cpe()
+        {
+            $this->mlog('Press enter to trigger the CPE');
+            
+            # Open file pointer to read from stdin
+            $fr=fopen("php://stdin","r");
+            # Read a maximum of 128 characters
+            $input = fgets($fr,128);
+    
+            fclose ($fr);
+            
+            $this->server_send_cpe_credentials();                        
         }
 
         private function server_session($client,& $counter,& $connection_state)
@@ -333,9 +404,7 @@
         {
             $data_array=$this->server_http_dechunk($data);
             
-            $soap_header_array=$this->server_http_soap_header($data_array);
-            
-//            print_r($soap_header_array);
+            $soap_header_array=$this->server_http_soap_header($data_array);            
             
             $xml_parser=new xml_parser($this->acs_functions_init,$soap_header_array['soap_array']);
             
@@ -344,10 +413,7 @@
 
             
 //            $this->server_data_parser_xml_parser($soap_header_array['soap_array'], $soap_header_array['header_array']);
-        }
-                        
-        
-        
+        }                                        
         
         # Function for removing chunk data size information
         private function server_http_dechunk($data)

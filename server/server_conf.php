@@ -75,6 +75,11 @@
             
             $this->parameter_array['acs_ip']=$function_array['acs_ip'];
             $this->parameter_array['acs_port']=$function_array['acs_port'];
+            $this->parameter_array['cpe_ip']=$function_array['cpe_ip'];
+            $this->parameter_array['cpe_port']=$function_array['cpe_port'];
+            $this->parameter_array['cpe_auth']=$function_array['cpe_auth'];
+            $this->parameter_array['cpe_user']=$function_array['cpe_user'];
+            $this->parameter_array['cpe_pass']=$function_array['cpe_pass'];
             $this->parameter_array['acs_functions']=$function_array['acs_functions'];
             
             foreach($function_array['acs_functions'] as $function)
@@ -114,6 +119,12 @@
               
             $xml_elements['acs_ip']=(string)$server_xml->acs_ip;
             $xml_elements['acs_port']=(string)$server_xml->acs_port;
+            $xml_elements['cpe_ip']=(string)$server_xml->cpe_ip;
+            $xml_elements['cpe_port']=(string)$server_xml->cpe_port;
+            $xml_elements['cpe_auth']=(string)$server_xml->cpe_auth;
+            $xml_elements['cpe_user']=(string)$server_xml->cpe_user;
+            $xml_elements['cpe_pass']=(string)$server_xml->cpe_pass;
+            
             $functions=(Array)$server_xml->acs_functions;
                                     
             foreach($functions as $function)

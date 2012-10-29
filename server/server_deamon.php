@@ -14,17 +14,15 @@
     {
                         
         $client=$server->socket_accept_client($master_socket);                
-                
-        $result=$server->socket_read_data($master_socket, $client);
         
+        $server->socket_read_data($master_socket, $client);
+                
         socket_close($client);
         
         unset($client);
         
         sleep(1);
                         
-    }
-    
-    
+    }    
 
 ?>

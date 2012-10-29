@@ -2,12 +2,18 @@
 <acs_server>    
         <acs_ip>192.168.1.66</acs_ip>
         <acs_port>51000</acs_port>
+        <cpe_ip>192.168.1.254</cpe_ip>
+        <cpe_port>51005</cpe_port>
+        <cpe_auth>basic</cpe_auth>
+        <cpe_user>foo</cpe_user>
+        <cpe_pass>bar</cpe_pass>
         <acs_functions>
             <name>GetRPCMethods</name>            
             <name>InformResponse</name>
             <name>EmptyResponse</name>
         </acs_functions>    
 </acs_server>
+
 
 <!-- 
 
