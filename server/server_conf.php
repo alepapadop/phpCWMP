@@ -10,6 +10,7 @@
     require_once $root_directory.'/modules/informResponse_module.php';
     require_once $root_directory.'/modules/setParameterValues_module.php';
     require_once $root_directory.'/modules/emptyResponse_module.php';
+    require_once $root_directory.'/modules/sessionClose_module.php';
     
     class server_conf extends logSystem{
         
@@ -26,7 +27,8 @@
                             'FactoryReset',
                             'GetRPCMethods',
                             'InformResponse',
-                            'EmptyResponse');
+                            'EmptyResponse',
+                            'SessionClose');
         
         var $obj_array=array();
         var $parameter_array=array();
@@ -104,6 +106,10 @@
                     case 'EmptyResponse':
                         $emptyResponseObj=new emptyResponse();
                         $this->obj_array['EmptyResponse']=new $emptyResponseObj;
+                        break;
+                    case 'SessionClose':
+                        $sessionCloseObj=new sessionClose();
+                        $this->obj_array['SessionClose']=new $sessionCloseObj;
                         break;
                 endswitch;
             }

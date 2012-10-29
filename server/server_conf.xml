@@ -11,6 +11,7 @@
             <name>GetRPCMethods</name>            
             <name>InformResponse</name>
             <name>EmptyResponse</name>
+            <name>SessionClose</name>
         </acs_functions>    
 </acs_server>
 

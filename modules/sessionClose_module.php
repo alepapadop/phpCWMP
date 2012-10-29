@@ -5,9 +5,7 @@
         var $soap;
         
         function __construct() {
-                             
-            
-            
+                                                     
             $header="HTTP/1.1 200 OK \r\n\ Connection: close \r\n Content-Length: 0 \r\n\r\n";
 
             $info=$header;

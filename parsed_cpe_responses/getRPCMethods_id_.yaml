@@ -1,12 +1,12 @@
-string : GetRPCMethods
-string : GetParameterNames
-string : GetParameterValues
-string : GetParameterAttributes
-string : SetParameterValues
-string : SetParameterAttributes
-string : AddObject
-string : DeleteObject
-string : Download
-string : ScheduleInform
-string : Reboot
-string : FactoryReset
+RPC function : GetRPCMethods
+RPC function : GetParameterNames
+RPC function : GetParameterValues
+RPC function : GetParameterAttributes
+RPC function : SetParameterValues
+RPC function : SetParameterAttributes
+RPC function : AddObject
+RPC function : DeleteObject
+RPC function : Download
+RPC function : ScheduleInform
+RPC function : Reboot
+RPC function : FactoryReset

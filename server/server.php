@@ -286,6 +286,8 @@
                             $this->server_session_getRPCMethods($client);
                             break;
                         case 2:
+                            $this->mlog('Calling sessionClose Function');
+                            $this->server_session_sessionClose($client);
                             socket_close($client);
                             unset($this->acs_functions[0]);
                             $connection_state=false;
@@ -306,7 +308,8 @@
                             $this->server_session_emptyResponse($client);
                             break;
                         case 3:
-                            $this->mlog('Calling socket_close() Function');
+                            $this->mlog('Calling sessionClose Function');
+                            $this->server_session_sessionClose($client);
                             socket_close($client);
                             unset($this->acs_functions[0]);
                             $connection_state=false;
@@ -326,7 +329,8 @@
                             $this->server_session_emptyResponse($client);
                             break;
                         case 3:
-                            $this->mlog('Calling socket_close() Function');
+                            $this->mlog('Calling sessionClose Function');
+                            $this->server_session_sessionClose($client);
                             socket_close($client);
                             unset($this->acs_functions[0]);
                             $connection_state=false;
@@ -338,7 +342,19 @@
             endswitch;
             
         }
-   
+        
+        private function server_session_sessionClose($client)
+        {
+            $soap_obj=$this->write_obj['SessionClose'];
+            
+            $r=socket_write($client,$soap_obj->soap);
+            
+            if(!$r)
+                $this->mlog('socket_write in session_close failed for peer '.$this->peer_ip.' '.socket_strerror($client));
+            
+            sleep(1);
+        }
+        
         private function server_session_informResponse($client)
         {                        
             
