@@ -40,6 +40,7 @@
         FactoryReset
         GetRPCMethods
         InformResponse
+        SessionClose
 
         don't use quotas.
         
@@ -47,11 +48,11 @@
         
         to edit the xml files which are located in the xml_templates folder.
         
-    [3] Always include the informResponce function, this function is 
+    [3] Always include the informResponce and SessionClose function, those  
     
-        necessary in order to open a session with the cpe. InformResponse is
+        functions are necessary in order to open a session with the cpe. 
         
-        not a tr-069 function.
+        InformResponse and SessionClose are not tr-069 functions.
         
     [4] The order in which the methods are reported is significant exept from
     

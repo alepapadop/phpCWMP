@@ -1,5 +1,5 @@
-<?php
-    
+<?php        
+
     $filename=__FILE__;
     $current_directory=dirname($filename);
     $root_directory=  dirname($current_directory);
@@ -7,7 +7,7 @@
     require_once '../logSystem.php';
     require_once 'server_conf.php';
     require_once $root_directory.'/xml_parser/xml_parser.php';
-     # php socket server
+    
     error_reporting(E_ERROR);
     
     class socket_server extends server_conf{
@@ -21,20 +21,32 @@
         private $cpe_pass;
         private $peer_ip;
         private $peer_port;
+        
+        # Stores the acs_functions that are defined in the server_conf_xml
+        # This array is always edited during the run of the script, thats because
+        # I keep a copy of it in acs_functions_init array
         private $acs_functions;
-        private $write_obj=array();        
+        
+        # Stores obj from the *_module classes
+        private $write_obj=array();
+        
+        # Stores the master_socket and the client
         private $client=array();
+        
+        # Stores the original copy of the acs_functions defined in server_conf_xml
         private $acs_functions_init=array();
                 
         function __construct()
         {
-            #to avoid to override the parent class which is server_conf
+            # Avoid to override the parent class which is server_conf
             parent::__construct();
             
             $server_conf_obj=new server_conf();
             
+            # Get the obj that were created in server_conf class
             $this->write_obj=$server_conf_obj->server_conf_get_obj();                        
             
+            # Get the parameters that were defined in server_conf.xml
             $acs_parameters=$server_conf_obj->server_conf_get_parameters();                        
             
             $this->acs_ip=$acs_parameters['acs_ip'];
@@ -51,6 +63,7 @@
                       
         }
         
+        # Creates the master socket
         function socket_create_master()
         {
             
@@ -86,6 +99,7 @@
             
         }                
         
+        # Accepts a client
         function socket_accept_client($master_socket)
         {
             $peer_ip=null;
@@ -93,8 +107,10 @@
             
             $this->mlog('Waiting for connections ...');
             
+            # Waits the user to push enter in order to send aconnection request message
             $this->server_trigger_cpe();
-                        
+            
+            # Set blocking state under the client connects to master_socket
             socket_set_block($master_socket);
                                                 
             if(($client= socket_accept($master_socket))===false)
@@ -114,6 +130,7 @@
             
         }
         
+        # Reading loop for the received data from the CPE
         function socket_read_data($master_socket, $client)
         {
             # Adding master_socket and the client into array to pass them to secket_select
@@ -162,6 +179,7 @@
                 if($input==null)
                 {                                                                                
                     
+                    # Extract soap response, headers and chunks from the received data
                     $this->server_http_extract_parts($data);                                        
                     
                     socket_close($client);
@@ -172,6 +190,7 @@
                     
                     unset($this->client);
                     
+                    # Change the flag status to exit the do ... while loop
                     $flag= false;
                     
                     $this->mlog('Client ip: '.$this->peer_ip.' disconnected');                                                            
@@ -181,15 +200,19 @@
                 # If there are any data from the socket
                 if($input)
                 {                                        
-                    
+                    # Stores all the data received from the CPE
                     $data.=$input;
-                                                            
+                    
+                    # Used as a temp variable for pattern recognision purposes
                     $temp.=$input;
                     
                     # If a session has been estrablished this part of code is executed.
                     if($session_established==true)
                     {
+                        # Counter for witch command should be executed nexr
                         $counter++;
+                        
+                        # Function with the commands that must be executed
                         $this->server_session($client,$counter,$connection_state);
                     }
 
@@ -199,8 +222,11 @@
                     {   
                         
                         $this->mlog('Calling EmptyReposnse Function');
+                        
+                        # Acs sends the inform Response to the CPE to start session
                         $this->server_session_informResponse($client);
                         
+                        # Flag variable to infrom that session has been established
                         $session_established=true;
                         
                         $temp=null;                            
@@ -212,6 +238,11 @@
                                
         }
         
+        # Sends the connect request to the CPE with the credentials
+        # If there are any credentials required the functions sends two time
+        # curl connect request because in the first atemp to connect the modem
+        # retrun a "401 authentication" info header and then is waiting for the
+        # credentials to be send.
         private function server_send_cpe_credentials()
         {
             
@@ -259,22 +290,33 @@
                         
         }
         
+        # Waits the user to push ENTER in order to send the connection request
+        # to the CPE
         private function server_trigger_cpe()
         {
             $this->mlog('Press enter to trigger the CPE');
             
             # Open file pointer to read from stdin
             $fr=fopen("php://stdin","r");
+            
             # Read a maximum of 128 characters
             $input = fgets($fr,128);
     
             fclose ($fr);
             
+            # Send the connection request to the CPE
             $this->server_send_cpe_credentials();                        
         }
-
+        
+        # For each acs_function defined in server_conf.xml there are specific
+        # steps (socket_writes) that must be done with specific order. After
+        # each step (socket_write) the code exits from server_session in order 
+        # to read the data in the reading loop. Some data are passed by reference
+        # and not by value.
         private function server_session($client,& $counter,& $connection_state)
         {            
+            # Check always the first function in array because after each 
+            # function is executed the function is beign unset from the array.
             
             $function=$this->acs_functions[0];
             
@@ -343,6 +385,9 @@
             
         }
         
+        # Sends to the CPE a connection close request.
+        # This is the first message that must be send to the CPE to trigger it
+        # and the CPE sends an Inform message
         private function server_session_sessionClose($client)
         {
             $soap_obj=$this->write_obj['SessionClose'];
@@ -355,6 +400,8 @@
             sleep(1);
         }
         
+        # Sends to the CPE a informResponse message
+        # After the CPE has send the Inform message a informReponse must be send
         private function server_session_informResponse($client)
         {                        
             
@@ -367,7 +414,8 @@
             
             sleep(1);
         }
-
+        
+        # Sends to the CPE a getRPCMethod message
         private function server_session_getRPCMethods($client)
         {
             $soap_obj=$this->write_obj['GetRPCMethods'];
@@ -379,7 +427,8 @@
             
             sleep(1);
         }
-
+        
+        # Sends to the CPE a Reboot message
         private function server_session_reboot($client)
         {
             $soap_obj=$this->write_obj['Reboot'];
@@ -391,7 +440,8 @@
             
             sleep(1);
         }
-
+        
+        # Sends to the CPE a setParameter message
         private function server_session_setParameter($client)
         {
             $soap_obj=$this->write_obj['SetParameterValues'];                        
@@ -403,7 +453,10 @@
             
             sleep(1);
         }
-
+        
+        # Sends to the CPE a emptyReaponse message
+        # After a session establishment the acs server must send a emptyResponse
+        # message to the cpe, as a ACK mechanism
         private function server_session_emptyResponse($client)
         {
             $soap_obj=$this->write_obj['EmptyResponse'];                        
@@ -416,27 +469,28 @@
             sleep(1);
         }
         
+        # Creates the soap_header_array which contains the header and soap data
+        # that the CPE has send to the acs server and parses thse data.
         private function server_http_extract_parts($data)
         {
             $data_array=$this->server_http_dechunk($data);
             
             $soap_header_array=$this->server_http_soap_header($data_array);            
             
+            # Calls the parser
             $xml_parser=new xml_parser($this->acs_functions_init,$soap_header_array['soap_array']);
-            
-            
-            
-
-            
-//            $this->server_data_parser_xml_parser($soap_header_array['soap_array'], $soap_header_array['header_array']);
+                                               
         }                                        
         
-        # Function for removing chunk data size information
+        # Removes the chunk information from the data that the CEP sends back 
+        # to the server
         private function server_http_dechunk($data)
         {
+            # Splits the data from the CPE in array
             $data_array = explode("\r\n", $data);
             
-            
+            # Check its array entry if there is a line which contains only
+            # hex charactes and removes this array entry.
             foreach($data_array as $line_num=>$line_string)
             {
                 $pattern='/^([0-9A-E]){1,}/i';
@@ -452,6 +506,8 @@
             
         }               
         
+        # Creates an array  with the soap and header data. Gets as input the 
+        # output from the server_http_dechunk function.
         private function server_http_soap_header($data_array)
         {
             $soap_start_flag=false;
@@ -464,19 +520,21 @@
             
             foreach($data_array as $line_num=>$line_string)
             {
-                
+                # Finds when a soap message starts
                 if(stripos(trim($line_string),'<soapenv:Envelope')!==false && $soap_start_flag===false)
                 {                 
                     $soap_start_flag=true;
                     $soap_end_flag=false;
                 }
                 
+                # Records a soap message
                 if($soap_start_flag==true && $soap_end_flag==false)
                 {                    
                     $soap_array[$counter].=$line_string.chr(10);
                     unset($data_array[$line_num]);
                 }                
                 
+                # Finds when a soap message ends
                 if(stripos(trim($line_string), '</soapenv:Envelope>')!==false && $soap_end_flag===false)
                 {                   
                     $soap_end_flag=true;
@@ -490,18 +548,21 @@
             
             foreach($data_array as $line_num=>$line_string)
             {
+                # Finds when a header message starts
                 if(stripos(trim($line_string),'POST')!==false && $header_start_flag===false)
                 {                 
                     $header_start_flag=true;
                     $header_end_flag=false;
                 }
                 
+                # Records the header message
                 if($header_start_flag==true && $header_end_flag==false)
                 {                    
                     $header_array[$counter].=$line_string.chr(10);
                     unset($data_array[$line_num]);
                 } 
                 
+                #Finds when a header message ends
                 if(trim($line_string)=='' && $header_end_flag===false)
                 {                   
                     $header_end_flag=true;
@@ -512,20 +573,7 @@
                                     
             return array('soap_array'=>$soap_array,'header_array'=>$header_array);
         }
-        
-        private function is_hex($hex) 
-        {     
-            $hex = strtolower(trim(ltrim($hex,"0")));
-            if (empty($hex)) 
-            { 
-                $hex = 0; 
-                
-            }
-            $dec = hexdec($hex);
-            
-            return ($hex == dechex($dec));
-        } 
-        
+                        
     }
     
 ?>

@@ -14,6 +14,8 @@
     
     class server_conf extends logSystem{
         
+        # Array with all avaible functions that can be inserted into
+        # the server_conf.xml
         var $options=array('GetParameterNames',
                             'GetParameterValues',
                             'GetParameterAttributes',
@@ -30,7 +32,10 @@
                             'EmptyResponse',
                             'SessionClose');
         
+        # Array which holds the obj from the modules
         var $obj_array=array();
+        
+        # Array which holds the acs parameters
         var $parameter_array=array();
         
         function __construct() {
@@ -39,16 +44,19 @@
             
         }
         
+        # Returns the obj array
         public function server_conf_get_obj()
         {
             return $this->obj_array;
         }
         
+        # Returns the parameter array
         public function server_conf_get_parameters()
         {
             return $this->parameter_array;
         }
         
+        # Validates the functions inserted into the server_conf.xml
         private  function server_conf_validate_xml_inputs()
         {
             $xml_array=array();
@@ -70,6 +78,8 @@
             
         }
         
+        # Creates the obj that are defined in the server_conf.xml 
+        # and fills in the parameter and obj array
         private function server_conf_create_objs()
         {
             
@@ -116,6 +126,7 @@
                                     
         }
         
+        # Prses the server_conf.xml file and return an array with the content
         private function server_conf_parse_xml()
         {
             

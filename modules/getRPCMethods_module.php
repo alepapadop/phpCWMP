@@ -1,7 +1,5 @@
 <?php
-    
-    
-    
+            
     class getRPCMethods extends logSystem{
         
         var $soap;
