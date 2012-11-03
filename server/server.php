@@ -16,6 +16,7 @@
         private $acs_port;
         private $cpe_ip;
         private $cpe_port;
+        private $cpe_path;
         private $cpe_auth;
         private $cpe_user;
         private $cpe_pass;
@@ -53,6 +54,7 @@
             $this->acs_port=$acs_parameters['acs_port'];
             $this->cpe_ip=$acs_parameters['cpe_ip'];
             $this->cpe_port=$acs_parameters['cpe_port'];
+            $this->cpe_path=$acs_parameters['cpe_path'];
             $this->cpe_auth=$acs_parameters['cpe_auth'];
             $this->cpe_user=$acs_parameters['cpe_user'];
             $this->cpe_pass=$acs_parameters['cpe_pass'];
@@ -111,8 +113,8 @@
             $this->server_trigger_cpe();
             
             # Set blocking state under the client connects to master_socket
-            socket_set_block($master_socket);
-                                                
+            socket_set_block($master_socket);                        
+            
             if(($client= socket_accept($master_socket))===false)
             {
                 $this->mlog('socket_accept() failed: '.socket_strerror($client));
@@ -166,7 +168,7 @@
             socket_select($this->client,$write = NULL, $except = NULL, $tv_sec= NULL);                  
             
             # Reading loop for a specific session
-            do{                                
+            do{
                 
                 # Reading data from the client
                 $input = socket_read($client,2048);                                                                
@@ -182,6 +184,7 @@
                     # Extract soap response, headers and chunks from the received data
                     $this->server_http_extract_parts($data);                                        
                     
+                    # Unset variables
                     socket_close($client);
                     
                     unset($client);
@@ -251,11 +254,12 @@
             $pass=$this->cpe_pass;
             $auth=$this->cpe_auth;
             
+            if($this->cpe_path!='')
+                $url.='/'.$this->cpe_path;
             
             $headers = array(             
                 "Content-type: text/xml;charset=\"utf-8\"", 
                 "Accept: text/xml",
-
             );
 
             $curl_session=curl_init();
@@ -305,7 +309,7 @@
             fclose ($fr);
             
             # Send the connection request to the CPE
-            $this->server_send_cpe_credentials();                        
+            $this->server_send_cpe_credentials();                      
         }
         
         # For each acs_function defined in server_conf.xml there are specific

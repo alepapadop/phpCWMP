@@ -4,6 +4,7 @@
         <acs_port>51000</acs_port>
         <cpe_ip>192.168.1.254</cpe_ip>
         <cpe_port>51005</cpe_port>
+        <cpe_path></cpe_path>
         <cpe_auth>basic</cpe_auth>
         <cpe_user>foo</cpe_user>
         <cpe_pass>bar</cpe_pass>
@@ -20,8 +21,21 @@
 
     This is the configuration file for the acs server please read the 
     instructions before you proceed to any action.
-
-    [1] To add a function in the server just use the template:
+    
+    [1] The accepted tags in the xml are the following:
+        
+        <acs_ip>        : The IP address of the ACS
+        <acs_port>      : The listening PORT of the ACS        
+        <cpe_ip>        : The configuration IP of the CPE
+        <cpe_port>      : The configuration PORT of the CPE
+        <cpe_path>      : The configuration PATH of the CPE
+        <cpe_auth>      : The authentication method used by the CPE
+        <cpe_user>      : The username for the CPE cwmp configuration
+        <cpe_pass>      : The password for the CPE cwmp configuration
+        <acs_functions> : The functions tha should be executed from the ACS
+        <name>          : The name of the function that should be executed from the ACS
+    
+    [2] To add a function in the server just use the template:
     
         <name>function_name</name>
 
@@ -44,17 +58,17 @@
 
         don't use quotas.
         
-    [2] To set or get specifiec parametes with the Set* and Get* you have
+    [3] To set or get specifiec parametes with the Set* and Get* you have
         
         to edit the xml files which are located in the xml_templates folder.
         
-    [3] Always include the informResponce and SessionClose function, those  
+    [4] Always include the informResponce and SessionClose function, those  
     
         functions are necessary in order to open a session with the cpe. 
         
         InformResponse and SessionClose are not tr-069 functions.
         
-    [4] The order in which the methods are reported is significant exept from
+    [5] The order in which the methods are reported is significant exept from
     
         the InformResponse method. Methods declared first will be proceded 
         

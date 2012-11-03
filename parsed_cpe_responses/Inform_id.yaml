@@ -4,7 +4,7 @@ ProductClass : Thomson TG585 v8
 SerialNumber : CP1146SFKEM
 EventCode : 6 CONNECTION REQUEST
 CommandKey : 
-Time : 2000-01-06T09:18:24Z
+Time : 2000-01-11T03:23:15Z
 .ExternalIPAddress : 192.168.1.254
 InternetGatewayDevice.DeviceInfo.HardwareVersion : IANT-E
 InternetGatewayDevice.DeviceInfo.ProvisioningCode : AXManaged

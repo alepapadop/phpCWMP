@@ -14,10 +14,9 @@
     {
                         
         function __construct($acs_functions_array,$soap_array)
-        {
-            
-            print_r($acs_functions_array);
-            
+        {                        
+            # For each acs_function the soap array is checked for specific
+            # patterns and call the appropriete parser.
             foreach($acs_functions_array as $function)
             {
                 $num=null;

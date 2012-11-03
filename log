@@ -1149,3 +1149,86 @@
 [2012-10-29 21:50:30] Client ip: 192.168.1.254 disconnected
 [2012-10-29 21:50:31] Waiting for connections ...
 [2012-10-29 21:50:31] Press enter to trigger the CPE
+[2012-10-30 13:48:01] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:48:01] Waiting for connections ...
+[2012-10-30 13:48:01] Press enter to trigger the CPE
+[2012-10-30 13:48:05] CPE trigger failed
+[2012-10-30 13:48:13] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:48:13] Waiting for connections ...
+[2012-10-30 13:48:14] Press enter to trigger the CPE
+[2012-10-30 13:48:35] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:48:35] Waiting for connections ...
+[2012-10-30 13:48:35] Press enter to trigger the CPE
+[2012-10-30 13:49:51] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:49:51] Waiting for connections ...
+[2012-10-30 13:49:51] Press enter to trigger the CPE
+[2012-10-30 13:52:38] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:52:38] Waiting for connections ...
+[2012-10-30 13:52:38] Press enter to trigger the CPE
+[2012-10-30 13:53:40] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:53:40] Waiting for connections ...
+[2012-10-30 13:53:40] Press enter to trigger the CPE
+[2012-10-30 13:54:17] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:54:17] Waiting for connections ...
+[2012-10-30 13:54:17] Press enter to trigger the CPE
+[2012-10-30 13:54:56] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:54:56] Waiting for connections ...
+[2012-10-30 13:54:56] Press enter to trigger the CPE
+[2012-10-30 13:55:26] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:55:26] Waiting for connections ...
+[2012-10-30 13:55:26] Press enter to trigger the CPE
+[2012-10-30 13:55:27] Client 192.168.1.254 connected
+[2012-10-30 13:55:30] Calling EmptyReposnse Function
+[2012-10-30 13:55:31] Calling getRPCMethods Function
+[2012-10-30 13:55:32] Calling sessionClose Function
+[2012-10-30 13:55:33] Parsing getRPCMEthod soap response
+[2012-10-30 13:55:33] Parsing inform soap response
+[2012-10-30 13:55:33] Client ip: 192.168.1.254 disconnected
+[2012-10-30 13:55:34] Waiting for connections ...
+[2012-10-30 13:55:34] Press enter to trigger the CPE
+[2012-10-30 13:59:12] Server start on socket 192.168.1.66:51000
+[2012-10-30 13:59:12] Waiting for connections ...
+[2012-10-30 13:59:12] Press enter to trigger the CPE
+[2012-10-30 13:59:14] Client 192.168.1.254 connected
+[2012-10-30 13:59:17] Calling EmptyReposnse Function
+[2012-10-30 13:59:18] Calling getRPCMethods Function
+[2012-10-30 13:59:19] Calling sessionClose Function
+[2012-10-30 13:59:20] Parsing getRPCMEthod soap response
+[2012-10-30 13:59:20] Parsing inform soap response
+[2012-10-30 13:59:20] Client ip: 192.168.1.254 disconnected
+[2012-10-30 13:59:21] Waiting for connections ...
+[2012-10-30 13:59:21] Press enter to trigger the CPE
+[2012-10-30 13:59:26] Client 192.168.1.254 connected
+[2012-10-30 13:59:29] Calling EmptyReposnse Function
+[2012-10-30 13:59:30] Calling getRPCMethods Function
+[2012-10-30 13:59:31] Calling sessionClose Function
+[2012-10-30 13:59:32] Parsing getRPCMEthod soap response
+[2012-10-30 13:59:32] Parsing inform soap response
+[2012-10-30 13:59:32] Client ip: 192.168.1.254 disconnected
+[2012-10-30 13:59:33] Waiting for connections ...
+[2012-10-30 13:59:33] Press enter to trigger the CPE
+[2012-11-03 14:45:45] Server start on socket 192.168.1.66:51000
+[2012-11-03 14:45:45] Waiting for connections ...
+[2012-11-03 14:45:45] Press enter to trigger the CPE
+[2012-11-03 14:45:46] Client 192.168.1.254 connected
+[2012-11-03 14:45:50] Calling EmptyReposnse Function
+[2012-11-03 14:45:51] Calling getRPCMethods Function
+[2012-11-03 14:45:52] Calling sessionClose Function
+[2012-11-03 14:45:53] Parsing getRPCMEthod soap response
+[2012-11-03 14:45:53] Parsing inform soap response
+[2012-11-03 14:45:53] socket_write in session_close failed for peer 192.168.1.254 
+[2012-11-03 14:45:54] Client ip: 192.168.1.254 disconnected
+[2012-11-03 14:45:55] Waiting for connections ...
+[2012-11-03 14:45:55] Press enter to trigger the CPE
+[2012-11-03 14:55:11] Server start on socket 192.168.1.66:51000
+[2012-11-03 14:55:11] Waiting for connections ...
+[2012-11-03 14:55:11] Press enter to trigger the CPE
+[2012-11-03 14:55:12] Client 192.168.1.254 connected
+[2012-11-03 14:55:16] Calling EmptyReposnse Function
+[2012-11-03 14:55:17] Calling getRPCMethods Function
+[2012-11-03 14:55:18] Calling sessionClose Function
+[2012-11-03 14:55:19] Parsing getRPCMEthod soap response
+[2012-11-03 14:55:19] Parsing inform soap response
+[2012-11-03 14:55:19] Client ip: 192.168.1.254 disconnected
+[2012-11-03 14:55:20] Waiting for connections ...
+[2012-11-03 14:55:20] Press enter to trigger the CPE
